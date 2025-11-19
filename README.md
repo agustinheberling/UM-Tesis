@@ -1,6 +1,6 @@
-## Proyecto de Estimación del Ingreso Disponible Ajustado (YDA) mediante Machine Learning
+# Proyecto de Estimación del Ingreso Disponible Ajustado (YDA) mediante Machine Learning
 
-# Descripción general del proyecto
+## Descripción general del proyecto
 
 Este repositorio contiene el código, experimentos y documentación asociados al trabajo de investigación orientado a la estimación del Ingreso Disponible Ajustado (YDA) utilizando modelos de aprendizaje automático supervisado aplicados a la Encuesta Continua de Hogares (ECH) 2024.
 El objetivo principal del estudio es evaluar la capacidad predictiva de diferentes algoritmos, incluyendo modelos basados en árboles y esquemas de combinación lineal, y analizar la importancia relativa de las variables socioeconómicas para la predicción del ingreso.
@@ -13,7 +13,7 @@ El proyecto incluye:
 - Modelos de combinación lineal (Blending y Stacking).
 - Curvas de aprendizaje, curvas de validación y análisis de Feature Importance.
 
-# Estructura del repositorio
+## Estructura del repositorio
 
 El repositorio contiene versiones progresivas de desarrollo, reflejando la evolución metodológica del trabajo:
 
@@ -27,7 +27,7 @@ El repositorio contiene versiones progresivas de desarrollo, reflejando la evolu
 - ECH 2024 Blending y Stacking: primera versión de los modelos de combinación lineal.
 - ECH 2024 Blending y Stacking 2: versión definitiva con meta-modelo lineal basado en regresión, Feature Importance del Stacking, comparación de desempeño frente a los modelos individuales.
 
-# Tecnologías utilizadas:
+## Tecnologías utilizadas:
 - Python 3.x
 - scikit-learn
 - XGBoost
@@ -36,7 +36,7 @@ El repositorio contiene versiones progresivas de desarrollo, reflejando la evolu
 - Visual Studio Code
 - GitHub para control de versiones
 
-# Metodología en resumen:
+## Metodología en resumen:
 - Preprocesamiento extensivo del dataset (limpieza, eliminación de variables redundantes y codificación de variables cualitativas).
 - División Train/Test conservando representatividad.
 - Validación cruzada con 3 folds, ajustada a las limitaciones de hardware (uso intensivo de RAM debido al tamaño de la ECH 2024).
@@ -44,14 +44,14 @@ El repositorio contiene versiones progresivas de desarrollo, reflejando la evolu
 - Evaluación estandarizada mediante R², MAE y RMSE.
 - Modelos de combinación lineal para mejorar estabilidad y performance.
 
-# Resultados principales:
-Los modelos basados en árboles mostraron un buen desempeño predictivo.
-El Tuning con RandomizedSearchCV tuvo mejoras moderadas en desempeño.
-El Random Forest mostró el mejor equilibrio entre bias y varianza.
-Blending (promedio de predicciones de RF y XGBoost) y Stacking (combinación de RF y XGB con meta-modelo lineal) alcanzan R² equivalente a 0.93–0.94 similar al RF simple.
-Stacking logra el mejor resultado general y mayor estabilidad.
+## Resultados principales:
+- Los modelos basados en árboles mostraron un buen desempeño predictivo.
+- El Tuning con RandomizedSearchCV tuvo mejoras moderadas en desempeño.
+- El Random Forest mostró el mejor equilibrio entre bias y varianza.
+- Blending (promedio de predicciones de RF y XGBoost) y Stacking (combinación de RF y XGB con meta-modelo lineal) alcanzan R² equivalente a 0.93–0.94 similar al RF simple.
+- Stacking logra el mejor resultado general y mayor estabilidad.
 
-# Próximas mejoras y líneas futuras:
+## Próximas mejoras y líneas futuras:
 - Probar stacking con meta-modelos no lineales o redes neuronales o modelos híbridos mas sofisticados.
 - Evaluar la robustez externa de los hallazgos aplicando los modelos a distintas definiciones del ingreso.
 - Usar técnicas avanzadas de interpretabilidad como los SHAP values (SHapley Additive exPlanations).
